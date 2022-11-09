@@ -99,7 +99,7 @@ app.use("/", (req, res) => {
     }
   }
 
-  Xasena();
+  HM();
 });
 app.listen(PORT, () => console.log("App listened on port", PORT));
 
