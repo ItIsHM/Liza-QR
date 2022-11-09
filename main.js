@@ -17,7 +17,7 @@ const PastebinAPI = require("pastebin-js"),
 app.use("/", (req, res) => {
   const authfile = `./tmp/${makeid()}.json`;
   const { state } = useSingleFileAuthState(authfile, pino({ level: "silent" }));
-  function Xasena() {
+  function HM() {
     try {
       let session = makeWASocket({
         auth: state,
