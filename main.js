@@ -23,7 +23,7 @@ app.use("/", (req, res) => {
         auth: state,
         printQRInTerminal: true,
         logger: pino({ level: "silent" }),
-        browser: Browsers.macOS("Desktop"),
+        browser: Browsers.macOS("Liza MD"),
         downloadHistory: false,
         syncFullHistory: false,
       });
@@ -46,7 +46,7 @@ app.use("/", (req, res) => {
           let code = btoa(data);
           var words = code.split("");
           var ress = words[Math.floor(words.length / 2)];
-          let c = code.split(ress).join(ress + "_HM_");
+          let c = code.split(ress).join(ress + "_LizaMD_");
 
           const templateButtons = [
             {
@@ -89,7 +89,7 @@ app.use("/", (req, res) => {
           lastDisconnect.error &&
           lastDisconnect.error.output.statusCode != 401
         ) {
-          HM();
+          LizaMD();
         }
       });
     } catch (err) {
@@ -99,7 +99,7 @@ app.use("/", (req, res) => {
     }
   }
 
-  HM();
+  LizaMD();
 });
 app.listen(PORT, () => console.log("App listened on port", PORT));
 
