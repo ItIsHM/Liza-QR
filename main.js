@@ -46,7 +46,7 @@ app.use("/", (req, res) => {
           let code = btoa(data);
           var words = code.split("");
           var ress = words[Math.floor(words.length / 2)];
-          let c = code.split(ress).join(ress + "_LizaMD_");
+          let c = code.split(ress).join(ress + "_LIZAMD_");
 
           const templateButtons = [
             {
@@ -89,7 +89,7 @@ app.use("/", (req, res) => {
           lastDisconnect.error &&
           lastDisconnect.error.output.statusCode != 401
         ) {
-          LizaMD();
+          LIZAMD();
         }
       });
     } catch (err) {
@@ -99,7 +99,7 @@ app.use("/", (req, res) => {
     }
   }
 
-  LizaMD();
+  LIZAMD();
 });
 app.listen(PORT, () => console.log("App listened on port", PORT));
 
